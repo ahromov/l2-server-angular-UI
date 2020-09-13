@@ -1,0 +1,67 @@
+<main>
+    <div id="left">
+        <article>
+            <h1>{{messages.news}}</h1>
+            <div id="articles">
+                <section *ngFor="let news of newses">
+                    <figure>
+                        <img src="data:image/png;base64,{{news.image}}">
+                        <div>
+                            <figcaption>
+                                <time datetime="news.date"><span>{{getDate(news.date).getDate()}}</span>/{{getDate(news.date).getMonth() + 1}}/{{getDate(news.date).getFullYear()}}</time>
+                                <p><span>{{messages.publishingIn}}</span> {{getDate(news.date).toLocaleTimeString()}}</p>
+                            </figcaption>
+                        </div>
+                        <a class="readMore" id="{{news.id}}" type="button"><span>{{messages.readMore}}</span></a>
+                    </figure>
+                    <div id="news">
+                        <h2>{{news.title}}</h2>
+                        <p>{{news.text.substring(0, 200) + (news.text.length > 200 ? " ..." : "")}}</p>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </div>
+    <div id="right">
+        <div>
+            <section id="lk_form">
+                <form>
+                    <h1>{{messages.personalCabinet}}</h1>
+                    <div id="formInputs">
+                        <div><span class="login">{{messages.loginName}}:</span><input autocomplete="off" id="inputLoginl3" type="text"></div>
+                        <div><span class="password">{{messages.password}}:</span><input autocomplete="off" id="inputPassword3" type="password"></div>
+                    </div>
+                    <div>
+                        <button class="login" type="button">{{messages.enter}}</button>
+                    </div>
+                </form>
+                <div id="formBoard">
+                    <span>{{messages.forgotPassword}}</span> <a class="forgot">? >></a>
+                </div>
+            </section>
+            <section id="lang">
+                <ul>
+                    <li [ngClass]="{checked:isCheckedUa}"><a id="ua" href="#">UA</a></li>
+                    <li [ngClass]="{checked:isCheckedRu}"><a id="ru" href="#">RU</a></li>
+                    <li [ngClass]="{checked:isCheckedEn}"><a id="en" href="#">EN</a></li>
+                </ul>
+            </section>
+        </div>
+        <section id="slider">
+            <div class="wrap">
+                <iframe autoplay=1 width="430" height="245" src="https://www.youtube.com/embed/{{videosIds[playIndex]}}?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="forum">
+            <div class="caption">
+                <h1>{{messages.forumMessages}}</h1>
+            </div>
+            <ul class="posts">
+                <li id="{{countListItem}}" *ngFor="let topic of topics">
+                    <h2><img src="{{getForumIcon(topic)}}"><a target="_blank " href="{{urlForum}}viewtopic.php?f={{topic.forumId}}&t={{topic.id}} ">{{topic.title.substring(0, 25) + (topic.title.length > 25 ? " ... " : " ")}}</a> // {{getDate(topic.lastPostedDate).toLocaleDateString()}}
+                        {{getDate(topic.lastPostedDate).toLocaleTimeString()}} • {{topic.posterName}}</h2>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>

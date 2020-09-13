@@ -1,0 +1,26 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="#!home" id="home">{{messages.general}}</a></li>
+            <li><a href="#!about" id="about">{{messages.aboutServer}}</a></li>
+            <li><a href="#!reg" id="reg">{{messages.registration}}</a></li>
+            <li><a target="_blank" href="https://drive.google.com/open?id=1a9jqbmIrBIJxJzH0ADN5LaAdtMbB_zKo" id="files">{{messages.files}}</a></li>
+            <li><a href="#!stat" id="stat">{{messages.statistic}}</a></li>
+            <li><a href="#!cont" id="contact">{{messages.contact}}</a></li>
+            <li><a target="_blank" href="${urlForum}" id="forum">{{messages.forum}}</a></li>
+        </ul>
+    </nav>
+    <div class="main_31">
+        <div id="logo">
+            <h1 class="logo">{{messages.serverName}}</h1>
+            <p class="logo">{{messages.slogan}}</p>
+        </div>
+        <div class="status">
+            <ul>
+                <li id="serverName"><span *ngFor="let server of registeredServers">{{server.name}} </span></li>
+                <li id="status"><span [style.color]="isStatusOn == true ? '#00ff30' : 'none'">{{serverStatus.status}}</span></li>
+                <li id="count">{{serverStatus.onlineCounter}}</li>
+            </ul>
+        </div>
+    </div>
+</header>

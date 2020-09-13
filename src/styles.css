@@ -1,1 +1,1031 @@
-/* You can add global styles to this file, and also import other style files */
+/* *********************** Reset ********************** */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* *************************** Custom ******************************* */
+
+@font-face {
+    font-family: "BalticaC";
+    src: url("fonts/BalticaC.otf");
+}
+
+@font-face {
+    font-family: "Mirage Ghotic";
+    src: url("fonts/Mirage_Ghotic.ttf");
+}
+
+@font-face {
+    font-family: "Cambria Math";
+    src: url("fonts/Cambria_Math.ttc");
+}
+
+@font-face {
+    font-family: "Minion Pro";
+    src: url("fonts/MinionPro_Regular.otf");
+}
+
+@font-face {
+    font-family: "Book OS Style";
+    src: url("fonts/BookOS.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(images/bg.jpg) #5b2123;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Book OS Style";
+}
+
+header {
+    padding-top: 25px;
+    height: 805px;
+}
+
+h2 {
+    font-size: 12px;
+}
+
+#main {
+    margin: 0 auto;
+    width: 980px;
+    background: url("images/article_bg.jpg") repeat-y;
+    border-radius: 0px 0px 15px 15px;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.main_31 {
+    background: url("images/main_31.png") 0px -52px no-repeat, url("images/main_32_copy.png") -246px -80px no-repeat;
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+    height: 552px;
+}
+
+#logo {
+    position: absolute;
+    top: 365px;
+    left: 125px;
+}
+
+h1.logo {
+    font-family: "Mirage Ghotic";
+    color: white;
+    font-size: 36px;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.75);
+    text-align: center;
+}
+
+p.logo {
+    font-family: "Cambria Math";
+    color: #ffd40d;
+    /* line-height: 0.1; */
+    text-align: center;
+}
+
+nav {
+    background-image: url("images/menu_bg.png");
+    height: 55px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    width: 774px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 18px 17px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+nav ul li a.navActive:before {
+    display: block;
+    content: "";
+    height: 7px;
+    background: url("images/alink_marker_top.png") no-repeat;
+    background-position: center;
+    margin-top: -22px;
+    margin-bottom: 12px;
+}
+
+nav ul li a.navActive:after {
+    display: block;
+    content: "";
+    height: 7px;
+    background: url("images/alink_marker_bottom.png") no-repeat;
+    background-position: center;
+    margin-top: 12px;
+}
+
+nav ul li a {
+    font-family: "BalticaC";
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li.checked a,
+nav ul li a.navActive,
+footer #next_page li a.newsBack,
+footer #next_page li e4a.homeBack,
+footer #next_page li a.npActive {
+    font-weight: bolder;
+    color: #ffd40d;
+}
+
+nav ul li.checked a:before {
+    display: block;
+    content: "";
+    height: 7px;
+    background: url("images/alink_marker_top.png") no-repeat;
+    background-position: center;
+    margin-top: -22px;
+    margin-bottom: 10px;
+}
+
+nav ul li.checked a:after {
+    display: block;
+    content: "";
+    height: 7px;
+    background: url("images/alink_marker_bottom.png") no-repeat;
+    background-position: center;
+    margin-top: 16px;
+}
+
+.main_37 {
+    width: 637px;
+    height: 291px;
+    position: absolute;
+    left: 823px;
+    top: 205px;
+}
+
+.status {
+    background: url("images/status_bg.png") no-repeat;
+    opacity: 0.5;
+    position: absolute;
+    left: 656px;
+    top: 198.5px;
+    width: 196px;
+    height: 31px;
+    text-align: center;
+}
+
+.status ul {
+    list-style: none;
+    padding-top: 5px;
+    width: 150px;
+    margin-left: 25px;
+    margin-top: 0px;
+}
+
+.status ul li {
+    display: inline-block;
+    padding: 0px 1.5% 0 1.5%;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Minion Pro";
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background: url("images/article_bg.jpg") repeat-y;
+    border-radius: 15px;
+    position: relative;
+    width: 981px;
+    margin: 0 auto;
+    margin-top: -300px;
+    opacity: 0;
+}
+
+#stat {
+    padding-top: 20px;
+}
+
+#stat h1 {
+    font-size: 16px;
+    background: url(images/menu_bg.png) no-repeat;
+    /* height: 54px; */
+    width: 100%;
+    padding-top: 14px;
+    box-sizing: border-box;
+}
+
+#stat table {
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid rgb(214, 234, 247, 0.3);
+    border-collapse: collapse;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgb(214, 234, 247, 0.3)
+}
+
+#stat section {
+    width: 100%;
+    background: none;
+    height: auto;
+    text-align: center;
+}
+
+#stat section p {
+    color: #ffa05f;
+}
+
+#stat table th {
+    font-weight: normal;
+    color: orange;
+    background-color: #5b2123;
+}
+
+#stat table#rates {
+    width: 330px;
+}
+
+#stat table#rates th {
+    width: 70%;
+}
+
+#stat div.top {
+    margin: 0 auto;
+    width: 70%;
+    color: rgb(214, 234, 247, 0.3);
+}
+
+#stat div.top a {
+    text-decoration: none;
+    color: yellow;
+}
+
+#stat table td {
+    text-align: center;
+    background-color: rgb(72, 43, 38);
+    vertical-align: middle;
+}
+
+#left,
+#right {
+    width: 490px;
+    display: inline-block;
+}
+
+#left {
+    float: left;
+}
+
+article h1 {
+    display: block;
+    width: 180px;
+    height: 21px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    background: url("images/article_title_border.png");
+    font-family: "Book OS Style";
+    font-size: 14px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+article section {
+    width: 474px;
+    height: 238px;
+    background: url("images/section_bg.png") -4px no-repeat;
+}
+
+article section div.message {
+    background: url(images/next_page_bg.png) repeat-y, url(images/next_page_bg_rev.png) right repeat-y;
+    font-size: 16px;
+}
+
+article section div.message form {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+article section div.message form p {
+    margin: 0;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+article section div.message form input {
+    height: 30px;
+    text-align: center;
+}
+
+article section div.message form input,
+article section div.message form textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(214, 234, 247, 0.3);
+    background-image: -moz-linear-gradient(90deg, rgb(96, 47, 35) 0%, rgb(58, 31, 23) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(96, 47, 35) 0%, rgb(58, 31, 23) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(96, 47, 35) 0%, rgb(58, 31, 23) 100%);
+    color: white;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+}
+
+article section div.message form textarea {
+    height: 200px;
+}
+
+article section div.message form input.question {
+    width: 130px;
+    margin: 0 auto;
+}
+
+article section div.message form button {
+    display: block;
+    background: #5b2123;
+    border: 1px solid rgb(214, 234, 247, 0.3);
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    font-family: "Book OS Style";
+    margin: 0 auto;
+}
+
+article section figure {
+    position: relative;
+    width: 215px;
+    height: 187px;
+    float: left;
+    margin: 0;
+    margin-left: 20px;
+    background: url("images/news_image_bg.png") no-repeat;
+}
+
+article section figure img {
+    width: 197px;
+    height: 170px;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    border-radius: 10px;
+}
+
+article section figure div {
+    width: 206px;
+    overflow: hidden;
+    position: absolute;
+    top: 122px;
+    border-radius: 0 0 10px 10px;
+}
+
+article section figure figcaption {
+    margin-left: 9px;
+    background-color: rgb(255, 132, 109, 0.7);
+    width: 211px;
+    height: 57px;
+    border-radius: 0 0 10px 10px;
+    border-top-right-radius: 100% 80%;
+    padding-top: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+article section figure figcaption time {
+    font-size: 16px;
+    font-family: "Book OS Style";
+    line-height: 0.1px;
+}
+
+article section figure figcaption time span {
+    font-size: 24px;
+}
+
+article section figure figcaption p {
+    font-size: 12px;
+    font-family: "Book OS Style";
+    line-height: 0.1px;
+    margin-top: 3px;
+}
+
+article section #news {
+    width: 211px;
+    float: right;
+}
+
+article section #news h2 {
+    display: block;
+    width: 252px;
+    height: 54px;
+    background: url("images/section_title_bg.png") no-repeat;
+    font-size: 16px;
+    font-family: "Book OS Style";
+    margin: 0;
+    margin-left: -37px;
+    margin-top: 15px;
+    padding-top: 17px;
+    padding-left: 40px;
+    color: #ffa05f;
+}
+
+article section #news p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    margin-top: -15px;
+    margin-left: -15px;
+}
+
+article section a {
+    margin-left: 49px;
+    position: absolute;
+    top: 178px;
+    display: block;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 132, 109);
+    border-radius: 10px;
+    background-image: -moz-linear-gradient(90deg, rgb(45, 27, 24) 0%, rgb(45, 27, 24) 0%, rgb(108, 56, 41) 1%, rgb(72, 43, 38) 25%, rgb(108, 56, 41) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(45, 27, 24) 0%, rgb(45, 27, 24) 0%, rgb(108, 56, 41) 1%, rgb(72, 43, 38) 25%, rgb(108, 56, 41) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(45, 27, 24) 0%, rgb(45, 27, 24) 0%, rgb(108, 56, 41) 1%, rgb(72, 43, 38) 25%, rgb(108, 56, 41) 100%);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-top: 10px;
+    margin-left: 45px;
+    width: 117px;
+    height: 21px;
+    color: white;
+    text-align: center;
+    font-family: "Book OS Style";
+    font-size: 12px;
+    padding-top: 2px;
+    box-sizing: border-box;
+}
+
+article section a:active {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 132, 109);
+    border-radius: 10px;
+    background-image: -moz-linear-gradient(90deg, rgb(45, 27, 24) 0%, rgb(45, 27, 24) 0%, rgb(108, 56, 41) 1%, rgb(72, 43, 38) 25%, rgb(108, 56, 41) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(45, 27, 24) 0%, rgb(45, 27, 24) 0%, rgb(108, 56, 41) 1%, rgb(72, 43, 38) 25%, rgb(108, 56, 41) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(45, 27, 24) 0%, rgb(45, 27, 24) 0%, rgb(108, 56, 41) 1%, rgb(72, 43, 38) 25%, rgb(108, 56, 41) 100%);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75), inset 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#next_page ul {
+    margin-left: 10px;
+}
+
+footer h1,
+footer p {
+    margin: 5px 15px;
+}
+
+#right {
+    float: right;
+}
+
+#right #lk_form {
+    background: url("images/lk_form_bg.png") no-repeat;
+    width: 397px;
+    height: 201px;
+    margin: 0;
+    margin-top: -85px;
+    padding-top: 31px;
+    float: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+}
+
+#right #lk_form form h1 {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+#right #lk_form form #formInputs div {
+    background-image: -moz-linear-gradient(90deg, rgb(58, 31, 23) 0%, rgb(96, 47, 35) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(58, 31, 23) 0%, rgb(96, 47, 35) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(58, 31, 23) 0%, rgb(96, 47, 35) 100%);
+    width: 351px;
+    margin-left: 21px;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+#right #lk_form form div span {
+    font-weight: bold;
+    width: 100px;
+    float: left;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#right #lk_form form div input {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(214, 234, 247, 0.3);
+    background-image: -moz-linear-gradient(90deg, rgb(96, 47, 35) 0%, rgb(58, 31, 23) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(96, 47, 35) 0%, rgb(58, 31, 23) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(96, 47, 35) 0%, rgb(58, 31, 23) 100%);
+    width: 252px;
+    height: 27px;
+    color: white;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: -1px;
+    text-align: center;
+}
+
+#right #lk_form form div input#g-recaptcha-response {
+    width: 113px;
+}
+
+#right #lk_form form button {
+    border: none;
+    background-image: -moz-linear-gradient(90deg, rgb(58, 31, 23) 0%, rgb(157, 76, 56) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(58, 31, 23) 0%, rgb(157, 76, 56) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(58, 31, 23) 0%, rgb(157, 76, 56) 100%);
+    width: 134px;
+    height: 25px;
+    margin-top: 5px;
+    margin-right: 25px;
+    color: white;
+}
+
+#right #lk_form #formBoard {
+    background-image: url("images/remember_bg.png");
+    margin: 0 auto;
+    width: 168px;
+    height: 33px;
+    margin-top: 30px;
+    position: relative;
+    font-size: 12px;
+    color: black;
+    position: absolute;
+    top: 53px;
+    margin-left: 113px;
+}
+
+#right #lk_form #formBoard span {
+    display: block;
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#right #lk_form #formBoard a {
+    display: block;
+    border-radius: 9px;
+    background-image: -moz-linear-gradient(90deg, rgb(52, 13, 5) 0%, rgb(63, 16, 6) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(52, 13, 5) 0%, rgb(63, 16, 6) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(52, 13, 5) 0%, rgb(63, 16, 6) 100%);
+    margin-left: 123px;
+    position: absolute;
+    top: 4px;
+    width: 39px;
+    height: 26px;
+    text-decoration: none;
+    color: white;
+    padding: 7px 3px;
+    box-sizing: border-box;
+    font-weight: bolder;
+}
+
+#right #lang {
+    float: right;
+    width: 93px;
+    position: absolute;
+    margin-left: 386px;
+}
+
+#lang ul li a {
+    padding-top: 2px;
+    display: block;
+}
+
+#right #lang ul {
+    list-style: none;
+    margin-left: 0px;
+    width: 96px;
+    padding: 0;
+    margin: 0;
+}
+
+#right #lang li {
+    display: inline-block;
+    font-size: 12px;
+    background: url("images/lang_bg.png") rgb(63, 16, 6) no-repeat;
+    width: 28px;
+    height: 16px;
+    text-align: center;
+}
+
+#right #lang li a {
+    text-decoration: none;
+    color: #ffa05f;
+}
+
+#right #lang li:hover {
+    background: url("images/lang_bg_checked.png") no-repeat;
+}
+
+#right #lang li:hover a {
+    color: black;
+    font-weight: bold;
+}
+
+#right #lang li.checked {
+    background: url("images/lang_bg_checked.png") no-repeat;
+}
+
+#right #lang li.checked a {
+    color: black;
+    font-weight: bold;
+}
+
+#slider .wrap {
+    text-align: center;
+}
+
+#forum .caption {
+    display: block;
+    width: 491px;
+    height: 54px;
+    background: url("images/forum_title_bg.png") -2px no-repeat;
+    margin-top: 13px;
+    margin-bottom: -5px;
+}
+
+#forum .caption h1 {
+    display: block;
+    height: 20px;
+    margin-top: 16px;
+    background: url(images/article_title_border.png) 2px 0px;
+    font-family: "Book OS Style";
+    font-size: 14px;
+    padding-top: 3px;
+    float: right;
+    margin-right: 38px;
+}
+
+#forum ul {
+    list-style: none;
+    margin: 0;
+}
+
+#forum .posts li {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    margin-top: 17px;
+    background: url("images/post_items_bg.png") -2px no-repeat;
+}
+
+#forum .posts li h2 img {
+    width: 14px;
+    position: absolute;
+    top: 21px;
+    left: 38px;
+}
+
+#forum .posts li h2 {
+    display: block;
+    font-size: 12px;
+    float: right;
+    margin-top: 21px;
+    margin-right: 15px;
+}
+
+#forum .posts li:before {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 52px;
+    background: url("images/post_items_marker.png");
+    position: absolute;
+    right: 418px;
+    top: 2px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer section {
+    margin: 0px;
+}
+
+footer section.left {
+    border-radius: 0 15px 0 0;
+}
+
+footer #next_page {
+    background-image: url("images/next_page_bg.png");
+    width: 392px;
+    height: 48px;
+    margin-top: 15px;
+}
+
+footer #next_page li {
+    display: inline-block;
+    list-style: none;
+}
+
+footer #next_page li a {
+    display: block;
+    background: url("images/next_page_btn.png") no-repeat;
+    width: 35px;
+    height: 37px;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: "Book OS Style";
+}
+
+footer #next_page li a:hover,
+footer #next_page li a.npActive,
+footer #next_page li a.newsBack {
+    background: url("images/next_page_btn_active.png") no-repeat;
+}
+
+footer #next_page li a.npActive {
+    color: #ffd40d;
+}
+
+footer h1,
+footer p {
+    margin-left: 15px;
+}
+
+footer h1 {
+    font-family: "Book OS Style";
+    font-size: 12px;
+}
+
+footer p {
+    font-family: "Book OS Style";
+    font-size: 10px;
+}
+
+footer #social {
+    background-image: url("images/socials_bg.png");
+    margin-top: 17px;
+    position: relative;
+    float: right;
+    border-radius: 0 0 15px 0;
+}
+
+footer #social .title {
+    width: 490px;
+    background: url("images/socials_title_bg.png") no-repeat;
+    padding-top: 5px;
+    text-align: end;
+}
+
+footer #social h1 {
+    display: block;
+    margin-top: 0px;
+    /* font-family: "Book OS Style"; */
+    font-size: 14px;
+    /* text-align: right;
+   margin-right: 20px; */
+}
+
+footer #social h1.logo {
+    font-size: 23px;
+    margin-top: 9px;
+}
+
+footer #social .l2logo {
+    /* background-image: url("images/lineage2_logo.png"); */
+    width: 180px;
+    height: 74px;
+    float: left;
+}
+
+footer #social .social_list {
+    float: right;
+    height: 74px;
+    font-size: 14px;
+}
+
+footer #social .social_list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer #social .social_list ul li {
+    display: block;
+    width: 100%;
+    float: right;
+    box-sizing: border-box;
+}
+
+footer #social .social_list ul li a {
+    display: block;
+    margin-top: 8px;
+}
+
+footer #social .social_list ul li div {
+    content: "";
+    display: block;
+    background: url("images/social_marker_bg.png") no-repeat;
+    width: 33px;
+    height: 33px;
+    float: left;
+    margin-right: 4px;
+    box-sizing: border-box;
+    padding-left: 9px;
+    padding-top: 9px;
+    font-size: 11px;
+}
+
+main,
+#articles,
+#logo,
+nav,
+#lk_form form,
+#right #lk_form form h1,
+div.message form,
+#forum .posts,
+nav ul a,
+.posts a,
+#right #lang li a,
+footer #next_page li a,
+.social_list a,
+#articles figure a span {
+    transition: all 0.2s linear;
+}
+
+nav ul a,
+.posts a,
+#right #lang li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul a:hover,
+.posts a:hover,
+.social_list a:hover,
+#articles figure a span:hover {
+    opacity: 0.5;
+}
+
+#forum .posts li.empty_marker:before {
+    background: url("images/post_items_empty_marker.png");
+}
