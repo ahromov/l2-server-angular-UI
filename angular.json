@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "l2-server-angular-UI"
+    }
+  },
+  "defaultProject": "l2-server-angular-UI",
+  "cli": {
+    "analytics": "9d801cd5-bfeb-4124-b35d-008864cd614f"
+  }
 }
