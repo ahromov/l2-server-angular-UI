@@ -12,7 +12,7 @@ export class RestClientService {
 
   constructor(private http: HttpClient) { }
 
-  get(path: string): Observable<Object> {
+  getOne(path: string): Observable<Object> {
     return this.http.get<Object>(this.urlServer + path);
   }
 
