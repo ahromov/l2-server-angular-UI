@@ -18,8 +18,8 @@
         <div class="status">
             <ul>
                 <li id="serverName"><span *ngFor="let server of registeredServers">{{server.name}} </span></li>
-                <li id="status"><span [style.color]="isStatusOn == true ? '#00ff30' : 'none'">{{serverStatus.status}}</span></li>
-                <li id="count">{{serverStatus.onlineCounter}}</li>
+                <li id="status"><span  [class.status-on]="serverStatus.status === 'ON'">{{serverStatus.status}}</span></li>
+                <li id="count"><span>{{serverStatus.onlineCounter}}</span></li>
             </ul>
         </div>
     </div>

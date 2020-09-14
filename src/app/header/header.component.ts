@@ -1,6 +1,5 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { MessagesService } from '../messages.service';
 import { RestClientService } from '../rest-client.service';
 
@@ -19,16 +18,14 @@ export class HeaderComponent implements OnInit {
 
   serversStatusUrl: string = 'gs/get/status';
   serverStatus: any;
-  isStatusOn: boolean;
 
   constructor(public serviceMassages: MessagesService, public serviceRestClient: RestClientService) {
   }
-  
+
   ngOnInit(): void {
     this.setMessages();
     this.getRegisteredServers();
     this.getServersStatus();
-    this.setIsStatusOn();
   }
 
   setMessages(): void {
@@ -40,12 +37,7 @@ export class HeaderComponent implements OnInit {
   }
 
   getServersStatus(): void {
-    this.serviceRestClient.get(this.serversStatusUrl).subscribe(serverStatus => this.serverStatus = serverStatus);
-  }
-
-  setIsStatusOn(): void {
-    if (this.serverStatus.status === 'ON')
-      this.isStatusOn = true;
+    this.serviceRestClient.getOne(this.serversStatusUrl).subscribe(serverStatus => this.serverStatus = serverStatus);
   }
 
 }
